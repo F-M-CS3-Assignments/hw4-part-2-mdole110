@@ -55,7 +55,7 @@ O(n^2)
 string vec_to_string(vector<int> v){
     //just for printing the output/input?
         string vec_as_string = "{";
-        for(int i=0; i<v.size(); i++){
+        for(long unsigned int i=0; i<v.size(); i++){
             string char_to_append = to_string(v[i]); //to_string: convert int to string https://www.geeksforgeeks.org/converting-number-to-string-in-cpp/
             vec_as_string = vec_as_string + char_to_append;
             //vec_as_string = vec_as_string + ",";
@@ -72,7 +72,7 @@ string vec_to_string(vector<int> v){
     }
 vector<int> longest_vector(vector<vector<int>>& candidates){
     vector<int> longest_vector;
-    for(int i=0; i<candidates.size(); i++){
+    for(long unsigned int i=0; i<candidates.size(); i++){
         if(candidates[i].size() > longest_vector.size()){
             longest_vector = candidates[i];
         }
@@ -95,10 +95,10 @@ vector<int> biggest_divisible_conglomerate(vector<int> input){
 
     vector<int> curr_subset;
     //sort in ascending order 
-        for(int i=0; i<input.size()-1; i++){
+        for(long unsigned int i=0; i<input.size()-1; i++){
         //find the smallest unsorted number, move to back
-        int smallestIndex = i;
-        for(int j=i+1; j<input.size(); j++){
+        long unsigned int smallestIndex = i;
+        for(long unsigned int j=i+1; j<input.size(); j++){
             if(input[j] < input[smallestIndex]){ //want the list to start w/ largest and decrease 
                 smallestIndex = j;
             }
