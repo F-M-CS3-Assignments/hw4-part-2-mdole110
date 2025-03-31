@@ -43,8 +43,8 @@ so overall time complexity would be O(n+n) AKA O(n^2)
 
 Time complexity for recursive solution:
 
-the programs calls each subset of each list (could be exponential growth) and says "use" or "lose" to each (2 possibilities)
-therefore, I believe the time complexity would be 
+in the worst, longest case, each element (n) would need to be iteratd through for every other element in the list (if all = divisible)
+therefore, it may have to go thru n n times meaning that O(n*n) should be an accurate desciption of time complexity
 
 O(n^2)
 
